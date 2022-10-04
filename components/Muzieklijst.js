@@ -10,6 +10,7 @@ class Muzieklijst extends React.Component {
 		}
 	}
 
+	// Enter functionality
 	inputPressedEnter = (input) => {
 		let toBeAdded = [
 			{
@@ -24,10 +25,12 @@ class Muzieklijst extends React.Component {
 		})
 	}
 
+	// Update
 	update = (e) => {
 		this.setState({ inputValue: e.target.value })
 	}
 
+	// Enter
 	enter = (e) => {
 		if (e.keyCode === 13) {
 			console.log("enter")
@@ -35,17 +38,21 @@ class Muzieklijst extends React.Component {
 		}
 	}
 
+	// Mount
 	componentDidMount() {
 		this.setState({
 			tasks: [],
 		})
 	}
 
+	// Render
 	render() {
 		const items = this.state.tasks.map((task) => {
 			return (
 				<>
-					<p>{task.name}</p>
+					<li>
+						<p>{task.name}</p>
+					</li>
 				</>
 			)
 		})
