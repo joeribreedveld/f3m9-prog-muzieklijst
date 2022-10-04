@@ -20,6 +20,7 @@ class Muzieklijst extends React.Component {
 		return (
 			<>
 				<h1 className='text-2xl'>Muzieklijst</h1>
+				<p>{this.props.genre}</p>
 			</>
 		)
 	}
